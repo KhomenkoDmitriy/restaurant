@@ -9,8 +9,17 @@ public class Dish {
     private double price;
     private boolean active;
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+
     public String getTitle() {
         return title;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     @Override
