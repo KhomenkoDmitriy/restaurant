@@ -1,0 +1,36 @@
+package app.domain;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+public class Customer {
+
+    private Long id;
+    private String name;
+    private boolean active;
+    private List<Dish> dishes = new ArrayList<>();
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Customer customer = (Customer) o;
+        return active == customer.active && Objects.equals(id, customer.id) && Objects.equals(name, customer.name) && Objects.equals(dishes, customer.dishes);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, active, dishes);
+    }
+
+    @Override
+    public String toString() {
+        String info = String.format("Customer: id - %d, name - %s, active - %s",
+                id, name, active ? "yes" : "no");
+        StringBuilder builder = new StringBuilder();
+        builder.append(info);
+        builder.append("dishes");
+        dishes.forEach(x -> builder.append(" ").append(x.getTitle()));
+        return builder.toString();
+    }
+}
