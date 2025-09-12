@@ -9,6 +9,11 @@ public class Dish {
     private double price;
     private boolean active;
 
+    public Dish(String title, double price) {
+        this.title = title;
+        this.price = price;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
