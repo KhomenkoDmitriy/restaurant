@@ -13,6 +13,9 @@ public class Dish {
         this.id = id;
     }
 
+    public Long getId() {
+        return id;
+    }
 
     public String getTitle() {
         return title;
@@ -20,6 +23,18 @@ public class Dish {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public boolean isActive() {
+        return active;
     }
 
     @Override
