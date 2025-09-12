@@ -19,6 +19,22 @@ public class Customer {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public List<Dish> getDishes() {
+        return dishes;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
