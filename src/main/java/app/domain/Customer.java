@@ -53,7 +53,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        String info = String.format("Customer: id - %d, name - %s, active - %s",
+        String info = String.format("Customer: id - %d, name - %s, active - %s%n",
                 id, name, active ? "yes" : "no");
         StringBuilder builder = new StringBuilder();
         builder.append(info);
